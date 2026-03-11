@@ -78,7 +78,7 @@ pipeline {
 
                     // Выполняем миграции и оптимизацию
                     sh '''
-                    docker-compose exec app composer install --no-dev --optimize-autoloader
+                    docker-compose exec -T app composer install --no-dev --optimize-autoloader
                     docker-compose exec app php artisan optimize:clear
                     docker-compose exec app php artisan optimize
                     docker-compose exec app php artisan migrate --force

@@ -78,6 +78,7 @@ pipeline {
 
                     // Выполняем миграции и оптимизацию
                     sh '''
+                    git config --global --add safe.directory /var/www/html
                     docker-compose exec -T app composer install --no-dev --optimize-autoloader
                     docker-compose exec -T app php artisan optimize:clear
                     docker-compose exec -T app php artisan optimize

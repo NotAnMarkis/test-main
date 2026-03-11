@@ -12,7 +12,6 @@ pipeline {
             steps {
                 git branch: 'main', 
                 url: 'https://github.com/notanmarkis/test-main.git'
-                credentialsId: 'gitcred'
             }
         }
 

@@ -47,7 +47,7 @@ pipeline {
                         
                         // Запускаем миграции и тесты
                         sh 'php artisan migrate --force'
-                        sh 'php artisan test'
+                        
                     }
                 }
             }

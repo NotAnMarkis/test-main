@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'your_dockerhub_username/laravel-app'
-        DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
+        DOCKER_IMAGE = 'notanmarkis2/laravel-app'
+        DOCKER_CREDENTIALS_ID = 'dockerhubcred'
         BUILD_NUMBER = "${env.BUILD_ID}"
     }
 

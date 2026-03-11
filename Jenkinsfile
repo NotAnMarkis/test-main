@@ -20,6 +20,7 @@ pipeline {
                 script {
                     // Копируем production .env
                     sh 'cp .env.production .env'
+                    sh 'composer install'
                     
                     // Генерируем APP_KEY если нужно
                     sh 'docker run --rm -v $(pwd):/app -w /app php:8.2-cli php artisan key:generate --force --no-interaction'

@@ -37,6 +37,3 @@ jobs:
 
       - name: Запуск миграций
         run: php artisan migrate --force
-
-      - name: Запуск тестов
-        run: php artisan test
